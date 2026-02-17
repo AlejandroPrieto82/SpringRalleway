@@ -10,8 +10,8 @@ FROM eclipse-temurin:17-jdk-focal
 
 WORKDIR /app
 
-COPY --from=build /app/target/kata-0.0.1-SNAPSHOT.jar ./kata.jar
+COPY --from=build /app/target/nombre-0.0.1-SNAPSHOT.jar ./nombre.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "kata.jar"]
+CMD ["java", "-jar", "nombre.jar"]
