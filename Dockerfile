@@ -1,4 +1,3 @@
-# Etapa 1: construcción usando Maven y OpenJDK 17
 FROM maven:3.9.3-eclipse-temurin-17 AS build
 
 WORKDIR /app
@@ -7,7 +6,6 @@ COPY . .
 
 RUN mvn clean install -DskipTests
 
-# Etapa 2: imagen ligera para ejecutar la app
 FROM eclipse-temurin:17-jdk-focal
 
 WORKDIR /app
